@@ -35,6 +35,9 @@ add_test(NAME parser_Test
 add_test(NAME parser_invalid_Test
     WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
     COMMAND parser ${CMAKE_CURRENT_SOURCE_DIR}/invalidNodeDefinitions.xml)
+add_test(NAME parser_invalid_Test2
+    WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
+    COMMAND parser ${CMAKE_CURRENT_SOURCE_DIR}/invalidNamespaceReference.xml)
 
 #these tests are simple loading nodesets and dumping it to stdout
 add_test(NAME import_testNodeset WORKING_DIRECTORY ${CMAKE_BINARY_DIR} COMMAND parserDemo ${PROJECT_SOURCE_DIR}/nodesets/testNodeset100nodes.xml)
